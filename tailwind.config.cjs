@@ -4,8 +4,9 @@ module.exports = {
 	theme: {
 		extend: {
 			backgroundColor:{
-				"astro-100": '#2A233D',
-				"astro-200": '#4F446D'
+			"astro-100": '#2A233D',
+			"astro-200": '#4F446D'
+		}
 		},
 	},
 	plugins: [],
