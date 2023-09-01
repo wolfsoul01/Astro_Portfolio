@@ -1,0 +1,20 @@
+---
+
+---
+
+<picture id="animation"> </picture>
+
+<script>
+  import animationData from "./animationData.json";
+  import Lottie from "lottie-web";
+
+  const caja = document.getElementById("animation");
+
+  Lottie.loadAnimation({
+    container: caja, 
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+  });
+</script>
