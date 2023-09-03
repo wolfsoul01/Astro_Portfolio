@@ -9,6 +9,12 @@ module.exports = {
           200:"#4F446D"
         }
       },
+      borderColor:{
+        astro:{
+          100:"#2A233D",
+          200:"#4F446D"
+        }
+      }
     },
   },
   plugins: [],
