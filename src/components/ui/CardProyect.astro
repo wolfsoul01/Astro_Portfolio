@@ -1,67 +1,42 @@
 ---
+interface Props {
+  title: string;
+  desc: string;
+  link: string;
+  demo?: string;
+  img: string;
+ 
+}
+
+const { title, desc, link, demo, img} = Astro.props;
 
 ---
 
-<article
-  class="relative overflow-hidden rounded-lg group   "
->
-  <img
-    src="/a.png"
-    alt=""
-    class="absolute inset-0 h-full object-cover w-full  "
-  />
+<article class="relative overflow-hidden rounded-lg group">
+  <img src={img} alt="" class="absolute inset-0 h-full object-cover w-full" />
 
-  <div class="absolute inset-0 h-full w-full bg-gradient-to-t from-black to-transparent md:opacity-0 group-hover:opacity-100 "></div>
+  <div
+    class="absolute inset-0 h-full w-full bg-gradient-to-t from-black to-transparent md:opacity-0 group-hover:opacity-100"
+  >
+  </div>
 
-  <div class="relative mt-52 p-4 font-semibold text-white z-10 translate-y-3 md:opacity-0 md:group-hover:opacity-100 md:group-hover:translate-y-0 duration-200 ease-in-out transition-all   ">
-    <h2 class="text-2xl ">Numeria</h2>
-    <p class="text-base">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque consectetur
-      illo perferendis at ut magni, maxime quibusdam illum laboriosam, minus
-      eius exercitationem alias? Nesciunt culpa veritatis modi fugiat minus.
-      Voluptate?
+  <div
+    class="relative mt-52 p-4 font-semibold text-white z-10 translate-y-3 md:opacity-0 md:group-hover:opacity-100 md:group-hover:translate-y-0 duration-200 ease-in-out transition-all"
+  >
+    <h2 class="text-2xl font-semibold  text-orange-500">{title}</h2>
+    <p class="text-base text-white/90">
+      {desc}
     </p>
+    <div class="relative z-20 mt-3 mb-3 flex ">
+      <a href={link} class="flex items-center gap-x-1 w-20"><svg class="text-orange-500 hover:-rotate-45" width="30" height="30" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+        <path fill="currentColor" d="M136.37 187.53a12 12 0 0 1 0 17l-5.94 5.94a60 60 0 0 1-84.88-84.88l24.12-24.11A60 60 0 0 1 152 99a12 12 0 1 1-16 18a36 36 0 0 0-49.37 1.47l-24.1 24.08a36 36 0 0 0 50.92 50.92l5.94-5.94a12 12 0 0 1 16.98 0Zm74.08-142a60.09 60.09 0 0 0-84.88 0l-5.94 5.94a12 12 0 0 0 17 17l5.94-5.94a36 36 0 0 1 50.92 50.92l-24.11 24.12A36 36 0 0 1 120 139a12 12 0 1 0-16 18a60 60 0 0 0 82.3-2.43l24.12-24.11a60.09 60.09 0 0 0 .03-84.91Z"/>
+    </svg>Link</a>
+  </div>
+
+  
   </div>
 </article>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <a href="#" class="group relative block bg-black">
-    <img
-      alt="Developer"
-      src="./a.png"
-      class="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
-    />
-  
-    <div class="relative p-4 sm:p-6 lg:p-8">
-      <p class="text-sm font-medium uppercase tracking-widest text-pink-500">
-        Developer
-      </p>
-  
-      <p class="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
-  
-      <div class="mt-32 sm:mt-48 lg:mt-64">
-        <div
-          class="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
-        >
-          <p class="text-sm text-white">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
-            perferendis hic asperiores quibusdam quidem voluptates doloremque
-            reiciendis nostrum harum. Repudiandae?
-          </p>
-        </div>
-      </div>
-    </div>
-  </a> -->
+<script>
+ 
+</script>
