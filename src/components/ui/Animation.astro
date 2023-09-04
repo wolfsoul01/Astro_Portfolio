@@ -2,19 +2,22 @@
 
 ---
 
-<picture id="animation"> </picture>
+<picture id="animation" class=" overflow-hidden"> </picture>
 
 <script>
   import animationData from "./animationData.json";
   import Lottie from "lottie-web";
 
   const caja = document.getElementById("animation");
+  caja.style.height='30px'
 
   Lottie.loadAnimation({
     container: caja, 
-    renderer: "svg",
+    renderer: 'svg',
     loop: true,
     autoplay: true,
     animationData: animationData,
+    
+    
   });
 </script>
