@@ -19,6 +19,14 @@ const proyect:proyectData[] = [
     title: "Task List",
     desc: "Tu asistente de productividad desde la terminal.Una práctica herramienta de línea de comandos para gestionar tus tareas diarias. Permite crear, editar, marcar como completadas y eliminar tareas fácilmente.",link:'',demo:"",img:"/img/todo.png"
   },
+  {
+    title:"Climate ",
+    desc:"Climate es una sencilla app de consola que te permite verificar rápidamente el clima actual y el pronóstico para los próximos días en cualquier ciudad del mundo. Simplemente ingresa el nombre de la ciudad y Climate te mostrará la temperatura, condiciones y más. La interfaz minimalista hace que checar el clima sea rápido y fácil desde la línea de comandos.",
+    link:"",
+    demo:"",
+    img:"/img/clima.png"
+
+  }
 ];
 ---
 
@@ -27,7 +35,7 @@ const proyect:proyectData[] = [
   <span class="text-center text-white mb-7 text-xl block underline font-medium"
     >Descubre lo que he creado</span
   >
-  <div class="grid md:grid-cols-2  gap-x-5 gap-y-5">
+  <div class="grid lg:grid-cols-2  gap-x-5 gap-y-5 max-w-7xl">
     {proyect.map(({title,desc,link,demo,img})=>{
         return(
             <Card title={title} desc={desc} link={link} demo={demo} img={img} />
