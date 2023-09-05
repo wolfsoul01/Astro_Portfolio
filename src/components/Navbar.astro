@@ -39,19 +39,19 @@ const title= '<AstroDev/>'
             id="nav"
             class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row [&>a]:text-lg relative [&>a]:relative [&>a]:z-10"
           >
-            <a
+            <a id="link"
               class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900  focus:bg-gray-200 focus:outline-none focus:shadow-outline"
               href="#">Inicio</a
             >
-            <a
+            <a id="link"
               class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900  focus:bg-gray-200 focus:outline-none focus:shadow-outline"
               href="#">Proyectos</a
             >
-            <a
+            <a id="link"
               class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900  focus:bg-gray-200 focus:outline-none focus:shadow-outline"
               href="#">Habilidades</a
             >
-            <a
+            <a id="link"
               class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900  focus:bg-gray-200 focus:outline-none focus:shadow-outline"
               href="#">Contacto</a
             >
@@ -66,9 +66,9 @@ const title= '<AstroDev/>'
 
 <script>
   const hover = document.getElementById("hover");
-  const li = document.querySelectorAll('a');
+  const link = document.querySelectorAll('#link');
 
-  li.forEach(item=>{
+  link.forEach(item=>{
     item.addEventListener('mouseover',()=>{
 
       const {top,left,width,height}= item.getBoundingClientRect()
