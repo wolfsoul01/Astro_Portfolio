@@ -4,25 +4,32 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: {
-        astro:{
-          100:"#2A233D",
-          200:"#4F446D",
-          300:"#B8B1E7",
-          4:"E5E7EB",
-          5:"F3F4F6",
-
-        }
+        astro: {
+          100: "#2A233D",
+          200: "#4F446D",
+          300: "#B8B1E7",
+          4: "E5E7EB",
+          5: "F3F4F6",
+        },
       },
-      gradientColorStops:{
-        astro:{
-          100:"#2A233D",
-          200:"#4F446D",
-          300:"#B8B1E7",
-          4:"E5E7EB",
-          5:"F3F4F6",
-
-        }
-      }
+      colors: {
+        astro: {
+          100: "#2A233D",
+          200: "#4F446D",
+          300: "#B8B1E7",
+          4: "E5E7EB",
+          5: "F3F4F6",
+        },
+      },
+      gradientColorStops: {
+        astro: {
+          100: "#2A233D",
+          200: "#4F446D",
+          300: "#B8B1E7",
+          4: "E5E7EB",
+          5: "F3F4F6",
+        },
+      },
     },
   },
   plugins: [],
