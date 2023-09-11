@@ -1,45 +1,60 @@
 ---
 import Card from "./ui/CardProyect.astro";
 
-interface proyectData{
-  title:string,
-  desc:string,
-  img:string,
+interface proyectData {
+  title: string;
+  desc: string;
+  img: string;
 
-  link:string,
-  demo:string
+  link: string;
+  demo: string;
 }
 
-const proyect:proyectData[] = [
+const proyect: proyectData[] = [
   {
     title: "Numeria",
-    desc: "Hace los cálculos aburridos más divertidos Una aplicación web para realizar desde operaciones simples hasta complejos cálculos matemáticos de forma rápida y sencilla.",link:'https://github.com/wolfsoul01/Proyecto-Numeria-Web',demo:"a",img:"/img/Numeria.png",
+    desc: "Hace los cálculos aburridos más divertidos Una aplicación web para realizar desde operaciones simples hasta complejos cálculos matemáticos de forma rápida y sencilla.",
+    link: "https://github.com/wolfsoul01/Proyecto-Numeria-Web",
+    demo: "a",
+    img: "/img/Numeria.png",
   },
   {
     title: "Task List",
-    desc: "Tu asistente de productividad desde la terminal.Una práctica herramienta de línea de comandos para gestionar tus tareas diarias. Permite crear, editar, marcar como completadas y eliminar tareas fácilmente.",link:'https://github.com/wolfsoul01/tasklist-consola',demo:"",img:"/img/todo.png"
+    desc: "Tu asistente de productividad desde la terminal.Una práctica herramienta de línea de comandos para gestionar tus tareas diarias. Permite crear, editar, marcar como completadas y eliminar tareas fácilmente.",
+    link: "https://github.com/wolfsoul01/tasklist-consola",
+    demo: "",
+    img: "/img/todo.png",
   },
   {
-    title:"Climate ",
-    desc:"Climate es una sencilla app de consola que te permite verificar rápidamente el clima actual y el pronóstico para los próximos días en cualquier ciudad del mundo. Simplemente ingresa el nombre de la ciudad y Climate te mostrará la temperatura, condiciones y más. La interfaz minimalista hace que checar el clima sea rápido y fácil desde la línea de comandos.",
-    link:"https://github.com/wolfsoul01/app-clima-consola",
-    demo:"",
-    img:"/img/clima.png"
-
-  }
+    title: "Climate ",
+    desc: "Climate es una sencilla app de consola que te permite verificar rápidamente el clima actual y el pronóstico para los próximos días en cualquier ciudad del mundo. Simplemente ingresa el nombre de la ciudad y Climate te mostrará la temperatura, condiciones y más. La interfaz minimalista hace que checar el clima sea rápido y fácil desde la línea de comandos.",
+    link: "https://github.com/wolfsoul01/app-clima-consola",
+    demo: "",
+    img: "/img/clima.png",
+  },
+  {
+    title: "SpaceX Api",
+    desc: "Aplicación web interactiva desarrollada con Astro que consume la API de SpaceX y muestra información detallada de lanzamientos espaciales. Implementa transiciones animadas entre Vistas para una experiencia fluida al navegar los datos de cada misión",
+    link: "https://github.com/wolfsoul01/SpaceX_launches_ViewTransitions",
+    demo: "",
+    img: "./img/spacex.png",
+  },
 ];
 ---
 
-<section id="Proyectos" class="bg-astro-100 px-10 py-10  ">
+<section id="Proyectos" class="bg-astro-100 px-10 py-10 max-w-full" >
   <h1 class="text-5xl font-extrabold text-center text-white mb-2">Proyectos</h1>
-  <span class="text-center text-white mb-7 text-xl block underline font-medium opacity-75"
-    >Descubre en lo que he trabajado. </span
-  >
-  <div class="grid lg:grid-cols-2  gap-x-5 gap-y-5 max-w-7xl">
-    {proyect.map(({title,desc,link,demo,img})=>{
-        return(
-            <Card title={title} desc={desc} link={link} demo={demo} img={img} />
-        )
-    })}
+  <span
+    class="text-center text-white mb-7 text-xl block underline font-medium opacity-75"
+    >Descubre en lo que he trabajado.
+  </span>
+  <div class="grid lg:grid-cols-2 gap-x-5 gap-y-5 max-w-7xl">
+    {
+      proyect.map(({ title, desc, link, demo, img }) => {
+        return (
+          <Card title={title} desc={desc} link={link} demo={demo} img={img} />
+        );
+      })
+    }
   </div>
 </section>
