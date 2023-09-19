@@ -8,7 +8,7 @@ interface Props {
   techs: string[];
 }
 
-const { title, desc, link, demo, img,techs } = Astro.props;
+const { title, desc, link, demo, img, techs } = Astro.props;
 ---
 
 <article class="relative overflow-hidden rounded-lg group shadow-md">
@@ -17,6 +17,27 @@ const { title, desc, link, demo, img,techs } = Astro.props;
     alt=""
     class="absolute inset-0 h-full object-cover w-full md:scale-110"
   />
+  <a class="relative text-end z-20 p-3 flex justify-end shadow-orange-500 cursor-pointer">
+    <svg
+    class="hover:scale-110 hover:shadow-lg "
+      xmlns="http://www.w3.org/2000/svg"
+      class="icon icon-tabler icon-tabler-brand-github-filled"
+      width="30"
+      height="30"
+      viewBox="0 0 24 24"
+      stroke-width="2"
+      stroke="currentColor"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path
+        d="M5.315 2.1c.791 -.113 1.9 .145 3.333 .966l.272 .161l.16 .1l.397 -.083a13.3 13.3 0 0 1 4.59 -.08l.456 .08l.396 .083l.161 -.1c1.385 -.84 2.487 -1.17 3.322 -1.148l.164 .008l.147 .017l.076 .014l.05 .011l.144 .047a1 1 0 0 1 .53 .514a5.2 5.2 0 0 1 .397 2.91l-.047 .267l-.046 .196l.123 .163c.574 .795 .93 1.728 1.03 2.707l.023 .295l.007 .272c0 3.855 -1.659 5.883 -4.644 6.68l-.245 .061l-.132 .029l.014 .161l.008 .157l.004 .365l-.002 .213l-.003 3.834a1 1 0 0 1 -.883 .993l-.117 .007h-6a1 1 0 0 1 -.993 -.883l-.007 -.117v-.734c-1.818 .26 -3.03 -.424 -4.11 -1.878l-.535 -.766c-.28 -.396 -.455 -.579 -.589 -.644l-.048 -.019a1 1 0 0 1 .564 -1.918c.642 .188 1.074 .568 1.57 1.239l.538 .769c.76 1.079 1.36 1.459 2.609 1.191l.001 -.678l-.018 -.168a5.03 5.03 0 0 1 -.021 -.824l.017 -.185l.019 -.12l-.108 -.024c-2.976 -.71 -4.703 -2.573 -4.875 -6.139l-.01 -.31l-.004 -.292a5.6 5.6 0 0 1 .908 -3.051l.152 -.222l.122 -.163l-.045 -.196a5.2 5.2 0 0 1 .145 -2.642l.1 -.282l.106 -.253a1 1 0 0 1 .529 -.514l.144 -.047l.154 -.03z"
+        stroke-width="0"
+        fill="currentColor"></path>
+    </svg>
+  </a>
 
   <div
     class="absolute inset-0 h-full w-full bg-gradient-to-t from-black to-transparent md:opacity-0 group-hover:opacity-100"
@@ -31,53 +52,20 @@ const { title, desc, link, demo, img,techs } = Astro.props;
       {desc}
     </p>
     <div class="relative z-20 mt-3 mb-3 flex">
-      <div class="flex justify-around ">
-        <a href={link} class="flex items-center gap-x-1 w-20"
-          ><svg
-            class="text-orange-500 hover:-rotate-12"
-            width="30"
-            height="30"
-            viewBox="0 0 256 256"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill="currentColor"
-              d="M136.37 187.53a12 12 0 0 1 0 17l-5.94 5.94a60 60 0 0 1-84.88-84.88l24.12-24.11A60 60 0 0 1 152 99a12 12 0 1 1-16 18a36 36 0 0 0-49.37 1.47l-24.1 24.08a36 36 0 0 0 50.92 50.92l5.94-5.94a12 12 0 0 1 16.98 0Zm74.08-142a60.09 60.09 0 0 0-84.88 0l-5.94 5.94a12 12 0 0 0 17 17l5.94-5.94a36 36 0 0 1 50.92 50.92l-24.11 24.12A36 36 0 0 1 120 139a12 12 0 1 0-16 18a60 60 0 0 0 82.3-2.43l24.12-24.11a60.09 60.09 0 0 0 .03-84.91Z"
-            ></path>
-          </svg>Link</a
-        >
-
-        {
-          demo && (
-            <a href={demo} class="flex items-center gap-x-1 w-20 ">
-              <svg
-                class="text-orange-500 hover:-rotate-12"
-                width="30"
-                height="30"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill="currentColor"
-                  d="M4 1h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1M9 5h1V3H9v2m0 8h1v-2H9v2m0 8h1v-2H9v2M5 3v2h2V3H5m0 8v2h2v-2H5m0 8v2h2v-2H5Z"
-                />
-              </svg>
-              Demo
-            </a>
-          )
-        }
+      <div class="flex justify-around">
+        
       </div>
 
       <div class="flex gap-x-2 w-full flex-grow">
         {
-          techs.map(tech=>{
-            return(
-              <span class="font-semibold text-orange-500 px-4 py-1 rounded-lg bg-slate-900 ">{tech}</span>
-            )
-
+          techs.map((tech) => {
+            return (
+              <span class="font-semibold text-orange-500 px-4 py-1 rounded-lg bg-slate-900 ">
+                {tech}
+              </span>
+            );
           })
         }
-
       </div>
     </div>
 
