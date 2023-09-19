@@ -1,12 +1,14 @@
 ---
-const title= '<AstroDev/>'
+const title = "<AstroDev/>";
 ---
 
 <header>
   <!-- component -->
   <div class="inset-x-0">
     <div class="antialiased bg-gray-100">
-      <div class="w-full text-gray-700 bg-gradient-to-r from-astro-300  to-yellow-50 to-65%">
+      <div
+        class="w-full text-gray-700 bg-gradient-to-r from-astro-300 to-yellow-50 to-65%"
+      >
         <div
           x-data="{ open: true }"
           class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8"
@@ -14,12 +16,11 @@ const title= '<AstroDev/>'
           <div class="flex flex-row items-center justify-between p-4">
             <a
               href="#Home"
-              class="text-xl font-bold tracking-widest text-gray-900 uppercase rounded-lg focus:outline-none focus:shadow-outline "
+              class="text-xl font-bold tracking-widest text-gray-900 uppercase rounded-lg focus:outline-none focus:shadow-outline"
               >{title}</a
             >
             <button
               class="rounded-lg md:hidden focus:outline-none focus:shadow-outline"
-              
             >
               <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
                 <path
@@ -39,69 +40,88 @@ const title= '<AstroDev/>'
             id="nav"
             class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row [&>a]:text-lg relative [&>a]:relative [&>a]:z-10"
           >
-            <a id="link"
-              class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900  focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+            <a
+              id="link"
+              class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
               href="#Home">Inicio</a
             >
-            <a id="link"
-              class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900  focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+            <a
+              id="link"
+              class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
               href="#Proyectos">Proyectos</a
             >
-            <a id="link"
-              class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900  focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+            <a
+              id="link"
+              class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
               href="#Skills">Habilidades</a
             >
-            <a id="link"
-              class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900  focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+            <a
+              id="link"
+              class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
               href="#Contacto">Contacto</a
             >
           </nav>
-          <div id="hover" class="absolute rounded-md  bg-gray-300 transition-all duration-200 ease-in-out top-[var(--top)] left-[var(--left)] w-[var(--whidth)] h-[var(--height)]"></div>
+          <div
+            id="hover"
+            class="absolute rounded-md bg-gray-300 transition-all duration-200 ease-in-out top-[var(--top)] left-[var(--left)] w-[var(--whidth)] h-[var(--height)]"
+          >
+          </div>
         </div>
       </div>
     </div>
   </div>
 </header>
 
-
 <script>
+  // Se encarga de controlar el efecto de hover 
   const hover = document.getElementById("hover");
-  const link = document.querySelectorAll('#link');
+  const link = document.querySelectorAll("#link");
 
-  link.forEach(item=>{
-    item.addEventListener('mouseover',()=>{
+  //Asignandole las dimesniones y la posision 
+  link.forEach((item) => {
+    item.addEventListener("mouseover", () => {
+      const { top, left, width, height } = item.getBoundingClientRect();
+      hover.style.opacity = "100";
 
-      const {top,left,width,height}= item.getBoundingClientRect()
-      hover.style.opacity='100'
+      hover.style.setProperty("top", `${top}px`);
+      hover.style.setProperty("left", `${left}px`);
+      hover.style.setProperty("width", `${width}px`);
+      hover.style.setProperty("height", `${height}px`);
+    });
 
-      hover.style.setProperty('top',`${top}px`)
-      hover.style.setProperty('left',`${left}px`)
-      hover.style.setProperty('width',`${width}px`)
-      hover.style.setProperty('height',`${height}px`)
-    })
-
-    item.addEventListener('mouseleave',()=>{
-      hover.style.opacity='0'
-    })
-  })
-
+    //Efecto de desaparecer 
+    item.addEventListener("mouseleave", () => {
+      hover.style.opacity = "0";
+    });
+    
+  });
 </script>
 
-
 <script>
+  //Se encarga del menu responsi 
   const nav = document.getElementById("nav");
   const button = document.querySelector("button");
   const openIcon = document.querySelector('path[x-show="!open"]');
   const closeIcon = document.querySelector('path[x-show="open"]');
+  const link = document.querySelectorAll("#link");
 
-  closeIcon.classList.add('hidden')
+  //Efecto del menu 
+  closeIcon.classList.add("hidden");
   button.addEventListener("click", () => {
+    closeIcon.classList.toggle("hidden");
+    openIcon.classList.toggle("hidden");
 
-    
-      closeIcon.classList.toggle('hidden');
-      openIcon.classList.toggle('hidden')
-    
     nav.classList.toggle("hidden");
     nav.classList.toggle("flex");
+  });
+
+  //Para ocultar en menu al dar click en los links 
+  link.forEach((item) => {
+    item.addEventListener("click", () => {
+      nav.classList.toggle("hidden");
+      nav.classList.toggle("flex");
+      closeIcon.classList.toggle("hidden");
+      openIcon.classList.toggle("hidden");
+    });
   });
 </script>
