@@ -8,6 +8,7 @@ interface proyectData {
 
   link: string;
   demo: string;
+  techs:string[]
 }
 
 const proyect: proyectData[] = [
@@ -15,8 +16,9 @@ const proyect: proyectData[] = [
     title: "Numeria",
     desc: "Hace los cálculos aburridos más divertidos Una aplicación web para realizar desde operaciones simples hasta complejos cálculos matemáticos de forma rápida y sencilla.",
     link: "https://github.com/wolfsoul01/Proyecto-Numeria-Web",
-    demo: "a",
+    demo: "",
     img: "/img/Numeria.jpg",
+    techs:['React','Tailwind','JavaScript']
   },
   {
     title: "Task List",
@@ -24,6 +26,7 @@ const proyect: proyectData[] = [
     link: "https://github.com/wolfsoul01/tasklist-consola",
     demo: "",
     img: "/img/todo.jpg",
+    techs:['NodeJS','JavaScript']
   },
   {
     title: "Climate ",
@@ -31,6 +34,7 @@ const proyect: proyectData[] = [
     link: "https://github.com/wolfsoul01/app-clima-consola",
     demo: "",
     img: "/img/clima.jpg",
+    techs:['NodeJS','JavaScript','Axios']
   },
   {
     title: "SpaceX Api",
@@ -38,6 +42,7 @@ const proyect: proyectData[] = [
     link: "https://github.com/wolfsoul01/SpaceX_launches_ViewTransitions",
     demo: "",
     img: "./img/spacex.jpg",
+    techs:['Astro','Tailwind','JavaScript']
   },
 ];
 ---
@@ -48,11 +53,11 @@ const proyect: proyectData[] = [
     class="text-center text-white mb-7 text-xl block underline font-medium opacity-75"
     >Descubre en lo que he trabajado.
   </span>
-  <div class="grid lg:grid-cols-2 gap-x-5 gap-y-5 max-w-7xl">
+  <div class="grid lg:grid-cols-2 gap-x-5 gap-y-5 max-w-7x place-content-center">
     {
-      proyect.map(({ title, desc, link, demo, img }) => {
+      proyect.map(({ title, desc, link, demo, img ,techs}) => {
         return (
-          <Card title={title} desc={desc} link={link} demo={demo} img={img} />
+          <Card title={title} desc={desc} link={link} demo={demo} img={img} techs={techs} />
         );
       })
     }

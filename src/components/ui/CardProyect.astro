@@ -5,9 +5,10 @@ interface Props {
   link: string;
   demo?: string;
   img: string;
+  techs: string[];
 }
 
-const { title, desc, link, demo, img } = Astro.props;
+const { title, desc, link, demo, img,techs } = Astro.props;
 ---
 
 <article class="relative overflow-hidden rounded-lg group shadow-md">
@@ -30,40 +31,54 @@ const { title, desc, link, demo, img } = Astro.props;
       {desc}
     </p>
     <div class="relative z-20 mt-3 mb-3 flex">
-      <a href={link} class="flex items-center gap-x-1 w-20"
-        ><svg
-          class="text-orange-500 hover:-rotate-12"
-          width="30"
-          height="30"
-          viewBox="0 0 256 256"
-          xmlns="http://www.w3.org/2000/svg"
+      <div class="flex justify-around ">
+        <a href={link} class="flex items-center gap-x-1 w-20"
+          ><svg
+            class="text-orange-500 hover:-rotate-12"
+            width="30"
+            height="30"
+            viewBox="0 0 256 256"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill="currentColor"
+              d="M136.37 187.53a12 12 0 0 1 0 17l-5.94 5.94a60 60 0 0 1-84.88-84.88l24.12-24.11A60 60 0 0 1 152 99a12 12 0 1 1-16 18a36 36 0 0 0-49.37 1.47l-24.1 24.08a36 36 0 0 0 50.92 50.92l5.94-5.94a12 12 0 0 1 16.98 0Zm74.08-142a60.09 60.09 0 0 0-84.88 0l-5.94 5.94a12 12 0 0 0 17 17l5.94-5.94a36 36 0 0 1 50.92 50.92l-24.11 24.12A36 36 0 0 1 120 139a12 12 0 1 0-16 18a60 60 0 0 0 82.3-2.43l24.12-24.11a60.09 60.09 0 0 0 .03-84.91Z"
+            ></path>
+          </svg>Link</a
         >
-          <path
-            fill="currentColor"
-            d="M136.37 187.53a12 12 0 0 1 0 17l-5.94 5.94a60 60 0 0 1-84.88-84.88l24.12-24.11A60 60 0 0 1 152 99a12 12 0 1 1-16 18a36 36 0 0 0-49.37 1.47l-24.1 24.08a36 36 0 0 0 50.92 50.92l5.94-5.94a12 12 0 0 1 16.98 0Zm74.08-142a60.09 60.09 0 0 0-84.88 0l-5.94 5.94a12 12 0 0 0 17 17l5.94-5.94a36 36 0 0 1 50.92 50.92l-24.11 24.12A36 36 0 0 1 120 139a12 12 0 1 0-16 18a60 60 0 0 0 82.3-2.43l24.12-24.11a60.09 60.09 0 0 0 .03-84.91Z"
-          ></path>
-        </svg>Link</a
-      >
 
-      {
-        demo && (
-          <a href={demo} class="flex items-center gap-x-1 w-20 ">
-            <svg
-              class="text-orange-500 hover:-rotate-12"
-              width="30"
-              height="30"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill="currentColor"
-                d="M4 1h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1M9 5h1V3H9v2m0 8h1v-2H9v2m0 8h1v-2H9v2M5 3v2h2V3H5m0 8v2h2v-2H5m0 8v2h2v-2H5Z"
-              />
-            </svg>
-            Demo
-          </a>
-        )
-      }
+        {
+          demo && (
+            <a href={demo} class="flex items-center gap-x-1 w-20 ">
+              <svg
+                class="text-orange-500 hover:-rotate-12"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill="currentColor"
+                  d="M4 1h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1M9 5h1V3H9v2m0 8h1v-2H9v2m0 8h1v-2H9v2M5 3v2h2V3H5m0 8v2h2v-2H5m0 8v2h2v-2H5Z"
+                />
+              </svg>
+              Demo
+            </a>
+          )
+        }
+      </div>
+
+      <div class="flex gap-x-2 w-full flex-grow">
+        {
+          techs.map(tech=>{
+            return(
+              <span class="font-semibold text-orange-500 px-4 py-1 rounded-lg bg-slate-900 ">{tech}</span>
+            )
+
+          })
+        }
+
+      </div>
     </div>
 
     <script></script>
