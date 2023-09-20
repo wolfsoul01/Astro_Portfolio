@@ -1,59 +1,121 @@
 ---
 import AnimationLogo from "./ui/Animation.astro";
-import cv from '../../public/CV-personal.pdf'
+import cv from "../../public/CV-personal.pdf";
 ---
 
-<section 
+<section
   id="Home"
-  class="flex flex-col md:grid grid-cols-2  px-10 justify-items-center  bg-astro-200   select-none min-h-screen  " 
+  class="flex flex-col md:grid grid-cols-2 px-10 justify-items-center bg-astro-200 select-none min-h-screen"
 >
-  <div class="flex flex-col max-w-xl  ">
-
-    
-    <h1 class="text-4xl sm:text-5xl text-white/90 font-extrabold  mb-10 mt-24 sm:w-fit  ">
+  <div class="flex flex-col max-w-xl">
+    <h1
+      class="text-4xl sm:text-5xl text-white/90 font-extrabold mb-10 mt-24 sm:w-fit"
+    >
       "SI PUEDES IMAGINARLO PUEDES PROGRAMARLO"
     </h1>
 
-    <p class="font-semibold text-white/80 text-4xl group">
-      Full Stack Developer 
+    <h2 class="font-semibold text-white/80 text-5xl group">
+      <span id="write"></span>
+    </h2>
+
+    <p class="font-semibold text-white/60 text-3xl mt-4">
+      Embárcate en un recorrido <br />por mi trabajo
     </p>
 
-    <p class="font-semibold text-white/60 text-3xl mt-4 ">
-      Embárcate en un recorrido  <br>por mi trabajo
-    </p>
-
-    <span class="flex p-3 [&>a]:text-green-100 justify-center sm:justify-start  ">
-      <a  href="https://www.linkedin.com/in/alejandro-fajardo-1548a0245/" class="text-gray-900 hover:text-orange-500 hover:scale-105 transition-all duration-150">
-        <svg width="35" height="35" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path fill="currentColor" d="M20.47 2H3.53a1.45 1.45 0 0 0-1.47 1.43v17.14A1.45 1.45 0 0 0 3.53 22h16.94a1.45 1.45 0 0 0 1.47-1.43V3.43A1.45 1.45 0 0 0 20.47 2ZM8.09 18.74h-3v-9h3ZM6.59 8.48a1.56 1.56 0 1 1 0-3.12a1.57 1.57 0 1 1 0 3.12Zm12.32 10.26h-3v-4.83c0-1.21-.43-2-1.52-2A1.65 1.65 0 0 0 12.85 13a2 2 0 0 0-.1.73v5h-3v-9h3V11a3 3 0 0 1 2.71-1.5c2 0 3.45 1.29 3.45 4.06Z"/>
-      </svg>
-      </a>
-      <a href="https://github.com/wolfsoul01" class="ml-4 text-gray-900  hover:text-orange-500 hover:scale-105 transition-all duration-150">
-        <svg width="35" height="35" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-            <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59c.4.07.55-.17.55-.38c0-.19-.01-.82-.01-1.49c-2.01.37-2.53-.49-2.69-.94c-.09-.23-.48-.94-.82-1.13c-.28-.15-.68-.52-.01-.53c.63-.01 1.08.58 1.23.82c.72 1.21 1.87.87 2.33.66c.07-.52.28-.87.51-1.07c-1.78-.2-3.64-.89-3.64-3.95c0-.87.31-1.59.82-2.15c-.08-.2-.36-1.02.08-2.12c0 0 .67-.21 2.2.82c.64-.18 1.32-.27 2-.27c.68 0 1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82c.44 1.1.16 1.92.08 2.12c.51.56.82 1.27.82 2.15c0 3.07-1.87 3.75-3.65 3.95c.29.25.54.73.54 1.48c0 1.07-.01 1.93-.01 2.2c0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+    <span class="flex p-3 [&>a]:text-green-100 justify-center sm:justify-start">
+      <a
+        href="https://www.linkedin.com/in/alejandro-fajardo-1548a0245/"
+        class="text-gray-900 hover:text-orange-500 hover:scale-105 transition-all duration-150"
+      >
+        <svg
+          width="35"
+          height="35"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill="currentColor"
+            d="M20.47 2H3.53a1.45 1.45 0 0 0-1.47 1.43v17.14A1.45 1.45 0 0 0 3.53 22h16.94a1.45 1.45 0 0 0 1.47-1.43V3.43A1.45 1.45 0 0 0 20.47 2ZM8.09 18.74h-3v-9h3ZM6.59 8.48a1.56 1.56 0 1 1 0-3.12a1.57 1.57 0 1 1 0 3.12Zm12.32 10.26h-3v-4.83c0-1.21-.43-2-1.52-2A1.65 1.65 0 0 0 12.85 13a2 2 0 0 0-.1.73v5h-3v-9h3V11a3 3 0 0 1 2.71-1.5c2 0 3.45 1.29 3.45 4.06Z"
+          ></path>
         </svg>
       </a>
-      <a href="https://wa.me/5355432291"  class="ml-4 text-gray-900 hover:text-orange-500 hover:scale-105 transition-all duration-150">
-        <svg width="35" height="35" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path fill="currentColor" d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18l-3.12.82l.83-3.04l-.2-.31a8.264 8.264 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24c2.2 0 4.27.86 5.82 2.42a8.183 8.183 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81c-.23-.08-.39-.12-.56.12c-.17.25-.64.81-.78.97c-.14.17-.29.19-.54.06c-.25-.12-1.05-.39-1.99-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.14-.25-.02-.38.11-.51c.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31c-.22.25-.86.85-.86 2.07c0 1.22.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74c.59.26 1.05.41 1.41.52c.59.19 1.13.16 1.56.1c.48-.07 1.47-.6 1.67-1.18c.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28z"/>
+      <a
+        href="https://github.com/wolfsoul01"
+        class="ml-4 text-gray-900 hover:text-orange-500 hover:scale-105 transition-all duration-150"
+      >
+        <svg
+          width="35"
+          height="35"
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill="currentColor"
+            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59c.4.07.55-.17.55-.38c0-.19-.01-.82-.01-1.49c-2.01.37-2.53-.49-2.69-.94c-.09-.23-.48-.94-.82-1.13c-.28-.15-.68-.52-.01-.53c.63-.01 1.08.58 1.23.82c.72 1.21 1.87.87 2.33.66c.07-.52.28-.87.51-1.07c-1.78-.2-3.64-.89-3.64-3.95c0-.87.31-1.59.82-2.15c-.08-.2-.36-1.02.08-2.12c0 0 .67-.21 2.2.82c.64-.18 1.32-.27 2-.27c.68 0 1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82c.44 1.1.16 1.92.08 2.12c.51.56.82 1.27.82 2.15c0 3.07-1.87 3.75-3.65 3.95c.29.25.54.73.54 1.48c0 1.07-.01 1.93-.01 2.2c0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+          ></path>
         </svg>
       </a>
-      <a href="https://t.me/wolf_soul01" class="ml-4 text-gray-900  hover:text-orange-500 hover:scale-105 transition-all duration-150">
-        <svg width="35" height="35" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19c-.14.75-.42 1-.68 1.03c-.58.05-1.02-.38-1.58-.75c-.88-.58-1.38-.94-2.23-1.5c-.99-.65-.35-1.01.22-1.59c.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02c-.09.02-1.49.95-4.22 2.79c-.4.27-.76.41-1.08.4c-.36-.01-1.04-.2-1.55-.37c-.63-.2-1.12-.31-1.08-.66c.02-.18.27-.36.74-.55c2.92-1.27 4.86-2.11 5.83-2.51c2.78-1.16 3.35-1.36 3.73-1.36c.08 0 .27.02.39.12c.1.08.13.19.14.27c-.01.06.01.24 0 .38z"/>
+      <a
+        href="https://wa.me/5355432291"
+        class="ml-4 text-gray-900 hover:text-orange-500 hover:scale-105 transition-all duration-150"
+      >
+        <svg
+          width="35"
+          height="35"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill="currentColor"
+            d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18l-3.12.82l.83-3.04l-.2-.31a8.264 8.264 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24c2.2 0 4.27.86 5.82 2.42a8.183 8.183 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81c-.23-.08-.39-.12-.56.12c-.17.25-.64.81-.78.97c-.14.17-.29.19-.54.06c-.25-.12-1.05-.39-1.99-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.14-.25-.02-.38.11-.51c.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31c-.22.25-.86.85-.86 2.07c0 1.22.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74c.59.26 1.05.41 1.41.52c.59.19 1.13.16 1.56.1c.48-.07 1.47-.6 1.67-1.18c.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28z"
+          ></path>
+        </svg>
+      </a>
+      <a
+        href="https://t.me/wolf_soul01"
+        class="ml-4 text-gray-900 hover:text-orange-500 hover:scale-105 transition-all duration-150"
+      >
+        <svg
+          width="35"
+          height="35"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill="currentColor"
+            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19c-.14.75-.42 1-.68 1.03c-.58.05-1.02-.38-1.58-.75c-.88-.58-1.38-.94-2.23-1.5c-.99-.65-.35-1.01.22-1.59c.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02c-.09.02-1.49.95-4.22 2.79c-.4.27-.76.41-1.08.4c-.36-.01-1.04-.2-1.55-.37c-.63-.2-1.12-.31-1.08-.66c.02-.18.27-.36.74-.55c2.92-1.27 4.86-2.11 5.83-2.51c2.78-1.16 3.35-1.36 3.73-1.36c.08 0 .27.02.39.12c.1.08.13.19.14.27c-.01.06.01.24 0 .38z"
+          ></path>
         </svg>
       </a>
     </span>
-    <a download={cv}
-    href={cv}
-    on
-      class="mt-4 text-white bg-orange-500  px-8 py-3 text-xl font-semibold rounded-lg md:w-fit hover:shadow-lg hover:shadow-orange-600 hover:rotate-2 cursor-pointer"
+    <a
+      download={cv}
+      href={cv}
+      class="mt-4 text-white text-center text-2xl md:text-xl bg-orange-500 px-8 py-3 font-semibold rounded-lg md:w-fit hover:shadow-lg hover:shadow-orange-600 hover:rotate-2 cursor-pointer"
       >Download Cv</a
     >
-
   </div>
-  <div class="relative  max-w-xl ">
-    <AnimationLogo  />
-    <img src="/img/curve.png" alt="" class="absolute top-20 z-10 sm:top-40 left-0  " />
+  <div class="relative max-w-xl">
+    <AnimationLogo />
+    <img
+      src="/img/curve.png"
+      alt=""
+      class="absolute top-20 z-10 sm:top-40 left-0"
+    />
   </div>
 </section>
+
+<script>
+  import Typed from "typed.js";
+
+  const typed = new Typed('#write',{
+    strings:['Full Stack Developer..','Backend Developer❤️..'],
+    typeSpeed: 100,
+    backSpeed:50,
+    loop: true,
+  loopCount: 5,
+  backDelay: 3000,
+  showCursors:true,
+
+  })
+</script>
