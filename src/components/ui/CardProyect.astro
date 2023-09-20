@@ -17,9 +17,9 @@ const { title, desc, link, demo, img, techs } = Astro.props;
     alt=""
     class="absolute inset-0 h-full object-cover w-full md:scale-110"
   />
-  <a class="relative text-end z-20 p-3 flex justify-end shadow-orange-500 cursor-pointer">
+  <a href={link} class="relative text-end z-20 p-3 flex justify-end shadow-orange-500 cursor-pointer">
     <svg
-    class="hover:scale-110 hover:shadow-lg "
+    class="hover:scale-110 text-slate-800 hover:text-slate-950 "
       xmlns="http://www.w3.org/2000/svg"
       class="icon icon-tabler icon-tabler-brand-github-filled"
       width="30"
@@ -27,7 +27,7 @@ const { title, desc, link, demo, img, techs } = Astro.props;
       viewBox="0 0 24 24"
       stroke-width="2"
       stroke="currentColor"
-      fill="none"
+      fill="currentColor"
       stroke-linecap="round"
       stroke-linejoin="round"
     >
@@ -47,6 +47,8 @@ const { title, desc, link, demo, img, techs } = Astro.props;
   <div
     class="relative mt-52 p-4 font-semibold text-white z-10 translate-y-3 md:opacity-0 md:group-hover:opacity-100 md:group-hover:translate-y-0 duration-200 ease-in-out transition-all"
   >
+
+  
     <h2 class="text-2xl font-semibold text-orange-500">{title}</h2>
     <p class="text-base text-white/75">
       {desc}
@@ -60,7 +62,7 @@ const { title, desc, link, demo, img, techs } = Astro.props;
         {
           techs.map((tech) => {
             return (
-              <span class="font-semibold text-orange-500 px-4 py-1 rounded-lg bg-slate-900 ">
+              <span class="font-semibold text-orange-500 px-4 py-1 rounded-lg bg-slate-900 hover:text-slate-900 hover:bg-orange-500 cursor-default ">
                 {tech}
               </span>
             );
