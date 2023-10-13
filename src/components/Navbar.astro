@@ -7,18 +7,19 @@ const title = "<AstroDev/>";
   <div class="inset-x-0">
     <div class="antialiased bg-gray-100">
       <div
-        class="w-full text-gray-700 bg-gradient-to-r from-astro-300 to-yellow-50 to-65%"
+        class="w-full text-gray-700 bg-gradient-to-r from-astro-200 to-yellow-50 to-65% border-none"
       >
         <div
           x-data="{ open: true }"
           class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8"
         >
-          <div class="flex flex-row items-center justify-between p-4">
-            <a
+          <div class="flex flex-row items-center justify-between p-4 flex-grow ">
+            <!-- <a
               href="#Home"
               class="text-xl font-bold tracking-widest text-gray-900 uppercase rounded-lg focus:outline-none focus:shadow-outline"
               >{title}</a
-            >
+            > -->
+            <img src="/img/logo.png" alt="" class="w-20 scale-150 max-h-screen" >
             <button
               class="rounded-lg md:hidden focus:outline-none focus:shadow-outline"
             >
@@ -38,7 +39,7 @@ const title = "<AstroDev/>";
           </div>
           <nav
             id="nav"
-            class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row [&>a]:text-lg relative [&>a]:relative [&>a]:z-10"
+            class="flex-col  hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row [&>a]:text-lg relative [&>a]:relative [&>a]:z-10"
           >
             <a
               id="link"
