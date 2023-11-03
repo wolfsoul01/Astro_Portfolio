@@ -8,7 +8,7 @@ interface proyectData {
 
   link: string;
   demo: string;
-  techs:string[]
+  techs: string[];
 }
 
 const proyect: proyectData[] = [
@@ -18,31 +18,7 @@ const proyect: proyectData[] = [
     link: "https://github.com/wolfsoul01/Proyecto-Numeria-Web",
     demo: "",
     img: "/img/Numeria.jpg",
-    techs:['React','Tailwind','JavaScript']
-  },
-  {
-    title: "Task List",
-    desc: "Tu asistente de productividad desde la terminal.Una práctica herramienta de línea de comandos para gestionar tus tareas diarias. Permite crear, editar, marcar como completadas y eliminar tareas fácilmente.",
-    link: "https://github.com/wolfsoul01/tasklist-consola",
-    demo: "",
-    img: "/img/todo.jpg",
-    techs:['NodeJS','JavaScript']
-  },
-  {
-    title: "Climate ",
-    desc: "Climate es una sencilla app de consola que te permite verificar rápidamente el clima actual y el pronóstico para los próximos días en cualquier ciudad del mundo. Simplemente ingresa el nombre de la ciudad y Climate te mostrará la temperatura, condiciones y más. La interfaz minimalista hace que checar el clima sea rápido y fácil desde la línea de comandos.",
-    link: "https://github.com/wolfsoul01/app-clima-consola",
-    demo: "",
-    img: "/img/clima.jpg",
-    techs:['NodeJS','JavaScript','Axios']
-  },
-  {
-    title: "SpaceX Api",
-    desc: "Aplicación web interactiva desarrollada con Astro que consume la API de SpaceX y muestra información detallada de lanzamientos espaciales. Implementa transiciones animadas entre Vistas para una experiencia fluida al navegar los datos de cada misión",
-    link: "https://github.com/wolfsoul01/SpaceX_launches_ViewTransitions",
-    demo: "",
-    img: "./img/spacex.jpg",
-    techs:['Astro','Tailwind','JavaScript']
+    techs: ["React", "Tailwind", "JavaScript"],
   },
   {
     title: "Tic-Tac-Toe",
@@ -50,22 +26,65 @@ const proyect: proyectData[] = [
     link: "https://github.com/wolfsoul01/Tic_Tac_Toe",
     demo: "",
     img: "./img/0_X.jpg",
-    techs:['React','CSS','JavaScript']
+    techs: ["React", "CSS", "JavaScript"],
+  },
+  {
+    title: "Task List",
+    desc: "Tu asistente de productividad desde la terminal.Una práctica herramienta de línea de comandos para gestionar tus tareas diarias. Permite crear, editar, marcar como completadas y eliminar tareas fácilmente.",
+    link: "https://github.com/wolfsoul01/tasklist-consola",
+    demo: "",
+    img: "/img/todo.jpg",
+    techs: ["NodeJS", "JavaScript"],
+  },
+
+  {
+    title: "SpaceX Api",
+    desc: "Aplicación web interactiva desarrollada con Astro que consume la API de SpaceX y muestra información detallada de lanzamientos espaciales. Implementa transiciones animadas entre Vistas para una experiencia fluida al navegar los datos de cada misión",
+    link: "https://github.com/wolfsoul01/SpaceX_launches_ViewTransitions",
+    demo: "",
+    img: "./img/spacex.jpg",
+    techs: ["Astro", "Tailwind", "JavaScript"],
+  },
+
+  {
+    title: "Guardi_Yami",
+    desc: "Diseño de sitio web y branding para guardería infantil \nEl proyecto consistió en diseñar la identidad visual y el sitio web de la guardería infantil . Trabajé en colaboración con la dueña para crear un branding que transmitiera calidez, seguridad y diversión, ideal para el público objetivo: padres de familia con niños de 0 a 5 años.",
+    link: "https://github.com/wolfsoul01/Tic_Tac_Toe",
+    demo: "https://guarderia.onrender.com/",
+    img: "./img/Guarderia.jpg",
+    techs: ["React", "React-Router", "Tailwind", "JavaScript"],
+  },
+  {
+    title: "Climate ",
+    desc: "Climate es una sencilla app de consola que te permite verificar rápidamente el clima actual y el pronóstico para los próximos días en cualquier ciudad del mundo. Simplemente ingresa el nombre de la ciudad y Climate te mostrará la temperatura, condiciones y más. La interfaz minimalista hace que checar el clima sea rápido y fácil desde la línea de comandos.",
+    link: "https://github.com/wolfsoul01/app-clima-consola",
+    demo: "",
+    img: "/img/clima.jpg",
+    techs: ["NodeJS", "JavaScript", "Axios"],
   },
 ];
 ---
 
-<section id="Proyectos" class="bg-astro-100 px-10 py-10 max-w-full" >
+<section id="Proyectos" class="bg-astro-100 px-10 py-10 max-w-full">
   <h1 class="text-5xl font-extrabold text-center text-white mb-2">Proyectos</h1>
   <span
     class="text-center text-white mb-7 text-xl block underline font-medium opacity-75"
     >Descubre en lo que he trabajado.
   </span>
-  <div class="grid lg:grid-cols-2 gap-x-5 gap-y-5 max-w-7x place-content-center">
+  <div
+    class="grid lg:grid-cols-2 gap-x-5 gap-y-5 max-w-7x place-content-center"
+  >
     {
-      proyect.map(({ title, desc, link, demo, img ,techs}) => {
+      proyect.map(({ title, desc, link, demo, img, techs }) => {
         return (
-          <Card title={title} desc={desc} link={link} demo={demo} img={img} techs={techs} />
+          <Card
+            title={title}
+            desc={desc}
+            link={link}
+            demo={demo}
+            img={img}
+            techs={techs}
+          />
         );
       })
     }

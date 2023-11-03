@@ -11,15 +11,18 @@ interface Props {
 const { title, desc, link, demo, img, techs } = Astro.props;
 ---
 
-<article class="relative overflow-hidden rounded-lg group shadow-md">
+<article class="relative overflow-hidden rounded-lg group shadow-md min-h-[450px] min-w-[350px] sm:min-w-[500px]">
   <img
     src={img}
     alt=""
     class="absolute inset-0 h-full object-cover w-full md:scale-110"
   />
-  <a href={link} class="relative text-end z-20 p-3 flex justify-end shadow-orange-500 cursor-pointer md:opacity-0 group-hover:opacity-100 transition-all duration-150 md:-translate-y-3 group-hover:translate-y-0">
+  <a
+    href={link}
+    class="relative text-end z-20 p-3 flex justify-end shadow-orange-500 cursor-pointer md:opacity-0 group-hover:opacity-100 transition-all duration-150 md:-translate-y-3 group-hover:translate-y-0"
+  >
     <svg
-    class="hover:scale-110 text-slate-800 hover:text-slate-950 "
+      class="hover:scale-110 text-slate-800 hover:text-slate-950"
       xmlns="http://www.w3.org/2000/svg"
       class="icon icon-tabler icon-tabler-brand-github-filled"
       width="30"
@@ -39,24 +42,45 @@ const { title, desc, link, demo, img, techs } = Astro.props;
     </svg>
   </a>
 
+  {
+    demo && (
+      <a
+        class="relative text-end z-20 p-3 flex justify-end shadow-orange-500 cursor-pointer md:opacity-0 group-hover:opacity-100 transition-all duration-150 md:-translate-y-3 group-hover:translate-y-0"
+        href={demo}
+      >
+        <svg
+          
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6  hover:scale-110 text-slate-800 hover:text-slate-950 "
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+          />
+        </svg>
+      </a>
+    )
+  }
+
   <div
     class="absolute inset-0 h-full w-full bg-gradient-to-t from-black to-transparent md:opacity-0 group-hover:opacity-100"
   >
   </div>
 
   <div
-    class="relative mt-52 p-4 font-semibold text-white z-10 translate-y-3 md:opacity-0 md:group-hover:opacity-100 md:group-hover:translate-y-0 duration-200 ease-in-out transition-all"
+    class="absolute bottom-0 mt-52 p-4 font-semibold text-white z-10 translate-y-3 md:opacity-0 md:group-hover:opacity-100 md:group-hover:translate-y-0 duration-200 ease-in-out transition-all"
   >
-
-  
     <h2 class="text-2xl font-semibold text-orange-500">{title}</h2>
-    <p class="text-base text-white/75">
+    <p class=" text-white/75  ">
       {desc}
     </p>
     <div class="relative z-20 mt-3 mb-3 flex">
-      <div class="flex justify-around">
-        
-      </div>
+      <div class="flex justify-around"></div>
 
       <div class="flex gap-x-2 w-full flex-grow">
         {
