@@ -13,33 +13,30 @@ const title = "<AstroDev/>";
           x-data="{ open: true }"
           class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8"
         >
-          <div class="flex flex-row items-center justify-between p-4 flex-grow ">
-            <!-- <a
-              href="#Home"
-              class="text-xl font-bold tracking-widest text-gray-900 uppercase rounded-lg focus:outline-none focus:shadow-outline"
-              >{title}</a
-            > -->
-            <img src="/img/logo.png" alt="" class="w-20 scale-150 max-h-screen" >
-            <button
-              class="rounded-lg md:hidden focus:outline-none focus:shadow-outline"
+          <div class="flex flex-row items-center justify-between p-4 flex-grow">
+
+            <img
+              src="/img/logo.png"
+              alt=""
+              class="w-20 scale-150 max-h-screen"
+            />
+
+            <!-- Menu animacion hamb -->
+            <label
+              for="check"
+              class="flex flex-col cursor-pointer w-[40px] min-w-[40px] md:hidden"
             >
-              <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
-                <path
-                  x-show="!open"
-                  fill-rule="evenodd"
-                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
-                  clip-rule="evenodd"></path>
-                <path
-                  x-show="open"
-                  fill-rule="evenodd"
-                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                  clip-rule="evenodd"></path>
-              </svg>
-            </button>
+              <input type="checkbox" name="" id="check" />
+              <span class="row"></span>
+              <span class="row"></span>
+              <span class="row"></span>
+            </label>
           </div>
+
+
           <nav
             id="nav"
-            class="flex-col  hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row [&>a]:text-lg relative [&>a]:relative [&>a]:z-10"
+            class="flex-col hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row [&>a]:text-lg relative [&>a]:relative [&>a]:z-10"
           >
             <a
               id="link"
@@ -58,7 +55,7 @@ const title = "<AstroDev/>";
             >
             <a
               id="link"
-              class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+              class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4  hover:text-gray-900 focus:text-gray-900 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
               href="#Contacto">Contacto</a
             >
           </nav>
@@ -74,11 +71,11 @@ const title = "<AstroDev/>";
 </header>
 
 <script>
-  // Se encarga de controlar el efecto de hover 
+  // Se encarga de controlar el efecto de hover
   const hover = document.getElementById("hover");
   const link = document.querySelectorAll("#link");
 
-  //Asignandole las dimesniones y la posision 
+  //Asignandole las dimesniones y la posision
   link.forEach((item) => {
     item.addEventListener("mouseover", () => {
       const { top, left, width, height } = item.getBoundingClientRect();
@@ -90,45 +87,71 @@ const title = "<AstroDev/>";
       hover.style.setProperty("height", `${height}px`);
     });
 
-    //Efecto de desaparecer 
+    //Efecto de desaparecer
     item.addEventListener("mouseleave", () => {
       hover.style.opacity = "0";
     });
-    
-    item.addEventListener('click',()=>{
-      hover.style.opacity="0"
-    })
+
+    item.addEventListener("click", () => {
+      hover.style.opacity = "0";
+    });
   });
 
   //Esto es temporal vale :)
-  
 </script>
 
 <script>
-  //Se encarga del menu responsi 
+  //Se encarga del menu responsi
   const nav = document.getElementById("nav");
-  const button = document.querySelector("button");
-  const openIcon = document.querySelector('path[x-show="!open"]');
-  const closeIcon = document.querySelector('path[x-show="open"]');
+  const check = document.getElementById("check");
   const link = document.querySelectorAll("#link");
-  //Efecto del menu 
-  closeIcon.classList.add("hidden");
-  button.addEventListener("click", () => {
-    closeIcon.classList.toggle("hidden");
-    openIcon.classList.toggle("hidden");
+  //Efecto del menu
+
+  check.addEventListener("click", () => {
 
     nav.classList.toggle("hidden");
     nav.classList.toggle("flex");
   });
 
-  //Para ocultar en menu al dar click en los links 
+  //Para ocultar en menu al dar click en los links
   link.forEach((item) => {
     item.addEventListener("click", () => {
       nav.classList.toggle("hidden");
       nav.classList.toggle("flex");
-      closeIcon.classList.toggle("hidden");
-      openIcon.classList.toggle("hidden");
-
     });
   });
 </script>
+
+<style>
+  .row {
+    background-color: #222;
+    border-radius: 10px;
+    height: 4px;
+    margin: 4px 0;
+    transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  }
+
+  .row:nth-of-type(1) {
+    width: 50%;
+  }
+  .row:nth-of-type(2) {
+    width: 100%;
+  }
+  .row:nth-of-type(3) {
+    width: 75%;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  input[type="checkbox"]:checked ~ .row:nth-of-type(1) {
+    transform: rotate(45deg) translate(8px, 0px);
+  }
+  input[type="checkbox"]:checked ~ .row:nth-of-type(2) {
+    transform: rotate(-45deg);
+  }
+  input[type="checkbox"]:checked ~ .row:nth-of-type(3) {
+    transform: translate(9px, -11px) rotate(43deg);
+  }
+</style>
